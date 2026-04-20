@@ -104,7 +104,7 @@ func (a *App) createMenus() *menu.Menu {
 	viewMenu.AddText("切换侧边栏", keys.CmdOrCtrl("b"), func(cd *menu.CallbackData) {
 		runtime.EventsEmit(a.ctx, "menu:toggle-sidebar")
 	})
-	viewMenu.AddText("切换属性面板", keys.Combo("b", keys.ShiftKey, keys.CmdOrCtrlKey), func(cd *menu.CallbackData) {
+	viewMenu.AddText("切换编辑面板", keys.Combo("b", keys.ShiftKey, keys.CmdOrCtrlKey), func(cd *menu.CallbackData) {
 		runtime.EventsEmit(a.ctx, "menu:toggle-panel")
 	})
 	viewMenu.AddText("历史记录", keys.CmdOrCtrl("h"), func(cd *menu.CallbackData) {
